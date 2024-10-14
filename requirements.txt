@@ -24,7 +24,7 @@ gast==0.6.0
 google-pasta==0.2.0
 grpcio==1.66.2
 gunicorn==23.0.0
-h5py==3.12.1
+h5py==3.11.0
 idna==3.10
 ipykernel==6.29.5
 ipython==8.28.0
