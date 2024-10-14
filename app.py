@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from pymongo import MongoClient
 import csv
 
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='/static')
 
 # MongoDB connection details
 host = "ocdb.app"
