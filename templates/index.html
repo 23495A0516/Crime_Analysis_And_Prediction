@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crime Analysis and Prediction</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            background-color: #f0f0f0; 
+            font-family: 'Arial', sans-serif; 
+            color: #333;
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0.1), rgba(0, 0, 255, 0.1)), 
+                              url('/static/images/Back_GND.png'); 
+            background-size: cover; 
+            background-attachment: fixed; 
+        }
+
+        header {
+            background-color: black; 
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .start-div {
+            float: left;
+            width: 100%;
+            background-color:gold;
+            margin: 0;
+            padding: 0 0 1% 0;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 45px;
+            margin: 90% 0% 0% 0%;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0% 36% 0 31%; 
+            padding: 20px; 
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 6px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+        }
+
+        a {
+            color: #2980b9; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        .upload-div {
+            float: right;
+            background-color: #ffea00;
+            padding: 80px;
+            border-radius: 8px;
+            box-shadow: 20px 20px 80px rgba(255, 213, 0, 0.728);
+            width: 300px;
+            margin-bottom: 20px;
+            text-align: center;
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        
+
+        .links-div {
+            float: right;
+            font-size: large;
+            margin: 0% 0% 0% 79%;
+        }
+
+        .links-div img{
+        float: center;
+        width: 8%;
+        margin: 0% 0% 0% 0%;
+    }
+
+         .container{
+        float: left;
+        color: rgb(222, 250, 215);
+
+    }
+
+        .analysis-form {
+            float: right;
+            width: 60%;
+            border: 5px solid black;
+            text-align: center;
+            margin: 10% 10% 0% 10%;
+            box-shadow: 20px -20px 80px rgba(221, 0, 255, 0.532);
+            background-color: #ff00ff76;
+            color: aqua;
+            font-size: 25px;
+            padding:  5% 25% 5% 25%;
+        }
+
+        .photo-container {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center;
+        }
+
+        .photo-container img {
+            max-width: 200px; 
+            height: auto; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px; 
+            margin-bottom: 2%;
+            margin-right: 8px;
+            box-shadow: 2px 2px 6px rgb(241, 4, 178);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Crime Analysis and Prediction</h1>
+    </header>
+    <div class="start-div">
+        <marquee behavior="scroll" direction="left" scrollamount="10" style="color:black; font-size:20px; font-weight:bolder; text-align:center;">
+            "Crime analysis is the key to preventing the next offense" &nbsp;&nbsp;&nbsp;
+            "Data is the modern crime fighter" &nbsp;&nbsp;&nbsp;
+            "Predictions based on patterns can make the world safer" &nbsp;&nbsp;&nbsp;
+            "The more data we analyze, the fewer crimes we let slip by"
+        </marquee>
+    </div>
+    <div class="clear : both"></div><br><br><br><br>
+    <div class="photo-container">
+        <img src="/static/images/img2.jpeg" alt="Photo 1"  style="width:200px; padding-right:2px; padding-left: 2px; background-color:#7c0303;">
+        <img src="/static/images/img3.jpeg" alt="Photo 2" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img1.jpeg" alt="Photo 3" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img4.jpeg" alt="Photo 4" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img5.jpeg" alt="Photo 5" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img6.jpeg" alt="Photo 6" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img7.jpeg" alt="Photo 7" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img8.jpeg" alt="Photo 8" style="width:200px; padding-right:2px;padding-left: 2px; background-color:#7c0303;">
+        <img src="/static/images/img9.jpeg" alt="Photo 9" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img10.jpg"  alt="Photo 10" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img11.jpeg" alt="Photo 11" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img12.jpeg" alt="Photo 12" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img13.jpeg" alt="Photo 13" style="width:200px; padding-right:2px; background-color:#7c0303;">
+        <img src="/static/images/img14.jpeg" alt="Photo 14" style="width: 200px; padding-right:2px; background-color:#7c0303;">
+    </div>
+
+   <main>
+        <section id="data-input">
+            <h2>Upload New Crime Data</h2>
+            <form id="upload-form" method="POST" action="/upload">
+                <div class="upload-div">
+                    <label for="crime-type">Type of Crime:</label>
+                    <select id="crime-type" name="crimeType" required>
+                        <option value="theft">Theft</option>
+                        <option value="harassment">Harassment</option>
+                        <option value="assault">Assault</option>
+                        <option value="burglary">Burglary</option>
+                        <option value="robbery">Robbery</option>
+                        <option value="vandalism">Vandalism</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="incident-date"><br>Incident Date:</label>
+                    <input type="date" id="incident-date" name="incidentDate" required>
+
+                    <label for="incident-time"><br>Incident Time:</label>
+                    <input type="time" id="incident-time" name="incidentTime" required><br>
+
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter Location" required>
+
+                    <br><button type="submit">Upload Crime Data</button>
+                </div>
+            </form>
+        </section>
+    </div> 
+    <div class="clear : both"></div>
+        <section id="analysis">
+            <form class="analysis-form">
+                <h4>Analyze Past Crime Data</h4>
+                <label for="city">City:</label>
+                <input type="text" id="city-name" name="city-name" required placeholder="City Name">
+<br><br>
+                <label for="crime-type">Select Crime Type:</label>
+                <select id="crimeType" name="crimeType" required>
+                    <option value="all">All</option>
+                    <option value="theft">Theft</option>
+                    <option value="harassment">Harassment</option>
+                    <option value="assault">Assault</option>
+                    <option value="burglary">Burglary</option>
+                    <option value="robbery">Robbery</option>
+                    <option value="vandalism">Vandalism</option>
+                    <option value="murder">Murder</option>
+                </select><br><br>
+
+                <button type="button" id="analyze-button">Analyze</button>
+            </form>
+
+            <div id="result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="feedback-section">
+            <h2>Feedback</h2>
+            <form action="submit_feedback.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <textarea name="feedback" placeholder="Your Feedback" rows="4" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+
+    
+        <div class="bottom-div">
+        </div><br><br>
+        <div class="links-div">
+            <ul class="container">
+                <form id="serviceRequestForm">
+                    <label for="serviceType">Our_Social_Media_Links:</label>                
+                <br><li class="items"><a href="https://www.instagram.com/crime_analysis551/?utm_source=ig_web_button_share_sheet">Instagram <img src="/static/images/Instalogo.jpeg" alt="Instagram"></a></li>
+                <li class="items"><a href="https://www.facebook.com/profile.php?id=61564244626392">Facebook <img src="/static/images/FBlogo.jpeg" alt="Facebook"></a> </li>
+                <li class="items"><a href="https://x.com/Crimealytics?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter<img src="/static/images/tvterlogo.jpeg" alt="Twitter"></a> </li>
+
+            </ul>
+            </div>
+            <br>
+        <p>&copy; 2024 Qis Crime Analysis and Prediction Tool. All rights reserved.</p>
+        </footer>
+
+    <script>
+        document.getElementById('analyze-button').onclick = function() {
+            const city = document.getElementById('city').value;
+            const crimeType = document.getElementById('crimeType').value;
+
+            fetch(`/analyze?city=${city}&crimeType=${crimeType}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        document.getElementById('result').innerText = data.message;
+                    } else {
+                        document.getElementById('result').innerText = 
+                            `In ${data.city}, the most frequent crime is ${data.mostFrequentCrime}.`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        };
+    </script>
+</body>
+</html>
